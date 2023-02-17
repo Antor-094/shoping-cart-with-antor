@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="navbar bg-sky-100 shadow-md">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none gap-2">
+              <div class="form-control">
+                <input type="text" placeholder="Search" class="input input-bordered" />
+              </div>
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="img/coffee.jpg" />
+                  </div>
+                </label>
+                <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </nav>
+</header>
+<main>
+    <section class="grid grid-cols-5 p-6 gap-3">
+
+        <div class="col-span-3 w-full grid grid-cols-3 gap-6">
+            <div class="card w-full  bg-base-100 shadow-xl">
+                <figure><img class="h-[200px]" src="img/coffee.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 id="first-name" class="card-title">Coffee JS!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <h2>Price: $<span id="first-price">110</span></h2>
+                  <h2>Quantity:<span id="first-quantity">5</span></h2>
+                  <div class="card-actions justify-end">
+                    <button id="first-card" class="btn btn-primary">ADD TO CART</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card w-full bg-base-100 shadow-xl">
+                <figure><img class="h-[200px]" src="img/heart_js.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Heart JS!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <h2>Price: $<span>110</span></h2>
+                  <h2>Quantity: <span>5</span></h2>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary" id="second-card">ADD TO CART</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card w-full bg-base-100 shadow-xl">
+                <figure><img class="h-[200px]" src="img/panda.png" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title" id="third-name">Panda JS!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <h2>Price: $ <span id="third-price">110</span></h2>
+                  <h2>Quantity: <span id="third-quantity">5</span></h2>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary" id="third-card">ADD TO CART</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card w-full bg-base-100 shadow-xl">
+                <figure><img class="h-[200px]" src="img/umbrella.png" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title" id="fourth-name">Umbrella JS!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <h2>Price: $ <span id="fourth-price">110</span></h2>
+                  <h2>Quantity: <span id="fourth-quantity">5</span></h2>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary" id="fourth-card">ADD TO CART</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card w-full bg-base-100 shadow-xl">
+                <figure><img class="h-[200px]" src="img/vue-js.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title" id="fifth-name">Vue JS!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <input type="text" placeholder="Price" class="input input-bordered input-accent w-full max-w-xs" id="fifth-price"/>
+                  <input type="text" placeholder="Quality" class="input input-bordered input-accent w-full max-w-xs" id="fifth-quantity"/>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary" id="fifth-card">ADD TO CART</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-span-2">
+              <h1 class="text-center font-bold text-3xl" >Total Products :</h1>
+              <div>
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>Quality</th>
+                          <th>Total</th>
+                        </tr>
+                      </thead>
+                      <tbody id="table-container">
+                        <!-- row 1 -->
+                        <!-- <tr>
+                          <th>1</th>
+                          <td>Cy Ganderton</td>
+                          <td>Quality Control Specialist</td>
+                          <td>Blue</td>
+                        </tr> -->
+                        
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+        </div>
+
+    </section>
+    
+</main>
+        
+    
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
